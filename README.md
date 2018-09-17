@@ -1,2 +1,2 @@
-# intro_to_the_web
+# intro-to-the-web
 Maker's Academy Week 3 material
