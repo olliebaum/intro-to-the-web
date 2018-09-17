@@ -1,7 +1,21 @@
-
 <div>
-  <img
-    src="http://bit.ly/1eze8aE"
-    style="border: medium dashed green;"
-  >
+  <% if @name %>
+    <h1>My name is <%= @name %></h1>
+  <% else %>
+    <h1>Name me!</h1>
+  <% end %>
+    <img
+      src="http://bit.ly/1eze8aE"
+      style="border: medium dashed green;"
+    >
+
 </div>
+<% if @name.nil? %>
+  <div style="margin-top: 5%;">
+    <form action="/named-cat" method="post">
+      <label for="name"><b>Enter a name: </b></label>
+      <input type="text" name="name">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+<% end %>
